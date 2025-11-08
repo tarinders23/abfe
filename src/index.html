@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhath Analytics - Transforming Data Into Actionable Intelligence</title>
+    <meta name="description" content="Premier market research company delivering precision insights through CATI, Online Surveys, IDI, F2F and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fadeInLeft {
+            animation: fadeInLeft 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fadeInRight {
+            animation: fadeInRight 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-scaleIn {
+            animation: scaleIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-slideDown {
+            animation: slideDown 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .hover-glow {
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+        }
+        
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .shimmer-effect {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">A</span>
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold text-gray-900">Abhath Analytics</div>
+                            <div class="text-xs text-gray-600">Market Research Excellence</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-blue-600 transition font-medium">Home</a>
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-blue-600 transition font-medium flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="py-2">
+                                <a href="cati.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">CATI Services</a>
+                                <a href="online-survey.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">Online Surveys</a>
+                                <a href="phone-to-web.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">Phone to Web</a>
+                                <a href="idi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">In-Depth Interviews</a>
+                                <a href="f2f.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">Face-to-Face Interviews</a>
+                                <a href="data-processing.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">Data Processing</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-blue-600 transition font-medium">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-blue-600 transition font-medium">Contact</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition transform hover:scale-105">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-900">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded">Home</a>
+                <div class="px-4 py-2 text-gray-600 font-semibold text-sm">Services</div>
+                <a href="cati.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded ml-4">CATI Services</a>
+                <a href="online-survey.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded ml-4">Online Surveys</a>
+                <a href="phone-to-web.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded ml-4">Phone to Web</a>
+                <a href="idi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded ml-4">In-Depth Interviews</a>
+                <a href="f2f.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded ml-4">Face-to-Face Interviews</a>
+                <a href="data-processing.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded ml-4">Data Processing</a>
+                <a href="about.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded">About</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded">Contact</a>
+                <a href="contact.html" class="block px-4 py-2 bg-blue-600 text-white rounded text-center">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fadeInLeft">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                        Transforming Data Into 
+                        <span class="gradient-text animate-float inline-block">Actionable Intelligence</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 animate-fadeInUp delay-200">
+                        Your trusted partner in market research excellence. We deliver precision, insights, and results that drive business growth and innovation.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 animate-fadeInUp delay-300">
+                        <a href="contact.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition transform hover:scale-105 hover-glow text-center shimmer-effect">
+                            Get Started <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="contact.html" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transition hover-scale text-center">
+                            Request a Quote
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-8">
+                        <div class="animate-scaleIn delay-400">
+                            <div class="text-3xl font-bold text-blue-600">10+</div>
+                            <div class="text-sm text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="animate-scaleIn delay-500">
+                            <div class="text-3xl font-bold text-purple-600">500+</div>
+                            <div class="text-sm text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="animate-scaleIn delay-600">
+                            <div class="text-3xl font-bold text-green-600">98%</div>
+                            <div class="text-sm text-gray-600">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-fadeInRight delay-200">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Data Analytics" class="rounded-2xl shadow-2xl hover-lift">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow"></div>
+        <div class="absolute bottom-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 scroll-reveal">About Abhath Analytics</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6 scroll-reveal"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto scroll-reveal">
+                    We don't just collect data—we unlock the stories hidden within it, providing you with clarity, strategy, and actionable intelligence that propels your business forward.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team Collaboration" class="rounded-2xl shadow-xl hover-lift">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6 scroll-reveal">Premier Market Research Company</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed scroll-reveal">
+                        Abhath Analytics stands as a premier market research company dedicated to empowering businesses with data-driven insights. With expertise spanning multiple research methodologies, we bridge the gap between raw data and strategic business decisions.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed scroll-reveal">
+                        Our commitment to quality, precision, and innovation sets us apart in the competitive landscape of market research. We deliver results that drive business growth and innovation.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start scroll-reveal" style="transition-delay: 0.1s;">
+                            <div class="bg-blue-100 rounded-full p-2 mr-4 hover-scale">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Quality & Precision</h4>
+                                <p class="text-gray-600 text-sm">Rigorous quality control at every stage</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start scroll-reveal" style="transition-delay: 0.2s;">
+                            <div class="bg-purple-100 rounded-full p-2 mr-4 hover-scale">
+                                <i class="fas fa-check text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Multiple Methodologies</h4>
+                                <p class="text-gray-600 text-sm">Expertise across CATI, Online, IDI, F2F & more</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start scroll-reveal" style="transition-delay: 0.3s;">
+                            <div class="bg-green-100 rounded-full p-2 mr-4 hover-scale">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Actionable Insights</h4>
+                                <p class="text-gray-600 text-sm">Data transformed into strategic intelligence</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 scroll-reveal">Our Services</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6 scroll-reveal"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto scroll-reveal">
+                    Comprehensive research solutions tailored to your business needs
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- CATI Service -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift scroll-reveal">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 hover-scale">
+                        <i class="fas fa-phone-volume text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">CATI Services</h3>
+                    <p class="text-gray-600 mb-6">
+                        Computer-Assisted Telephone Interviewing blending human interaction with digital efficiency for B2B and B2C research.
+                    </p>
+                    <a href="cati.html" class="text-blue-600 font-semibold hover:text-blue-700 transition inline-flex items-center group">
+                        Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition"></i>
+                    </a>
+                </div>
+                
+                <!-- Online Survey -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift scroll-reveal" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 hover-scale">
+                        <i class="fas fa-laptop text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Online Surveys</h3>
+                    <p class="text-gray-600 mb-6">
+                        Fast, reliable, and cost-effective research with our diverse panel of qualified respondents across demographics.
+                    </p>
+                    <a href="online-survey.html" class="text-purple-600 font-semibold hover:text-purple-700 transition inline-flex items-center group">
+                        Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition"></i>
+                    </a>
+                </div>
+                
+                <!-- Phone to Web -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 hover-scale">
+                        <i class="fas fa-exchange-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Phone to Web</h3>
+                    <p class="text-gray-600 mb-6">
+                        Seamless integration of telephone contact with online survey completion for maximum flexibility and response rates.
+                    </p>
+                    <a href="phone-to-web.html" class="text-green-600 font-semibold hover:text-green-700 transition inline-flex items-center group">
+                        Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition"></i>
+                    </a>
+                </div>
+                
+                <!-- IDI -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift scroll-reveal" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 hover-scale">
+                        <i class="fas fa-comments text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">In-Depth Interviews</h3>
+                    <p class="text-gray-600 mb-6">
+                        Qualitative research excellence uncovering deep insights through one-on-one conversations with expert moderators.
+                    </p>
+                    <a href="idi.html" class="text-orange-600 font-semibold hover:text-orange-700 transition inline-flex items-center group">
+                        Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition"></i>
+                    </a>
+                </div>
+                
+                <!-- F2F -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift scroll-reveal" style="transition-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 hover-scale">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Face-to-Face Interviews</h3>
+                    <p class="text-gray-600 mb-6">
+                        Personal engagement through in-person CAPI surveys, door-to-door, intercept, and in-home interviews.
+                    </p>
+                    <a href="f2f.html" class="text-pink-600 font-semibold hover:text-pink-700 transition inline-flex items-center group">
+                        Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition"></i>
+                    </a>
+                </div>
+                
+                <!-- Data Processing -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift scroll-reveal" style="transition-delay: 0.5s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 hover-scale">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Data Processing</h3>
+                    <p class="text-gray-600 mb-6">
+                        Transform raw data into strategic intelligence with comprehensive analysis, validation, and reporting services.
+                    </p>
+                    <a href="data-processing.html" class="text-indigo-600 font-semibold hover:text-indigo-700 transition inline-flex items-center group">
+                        Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 scroll-reveal">Why Choose Abhath Analytics?</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto scroll-reveal"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center scroll-reveal" style="transition-delay: 0.1s;">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 hover-scale">
+                        <i class="fas fa-award text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Experienced Team</h3>
+                    <p class="text-gray-600">Decades of combined research expertise</p>
+                </div>
+                
+                <div class="text-center scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 hover-scale">
+                        <i class="fas fa-check-circle text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Quality Focus</h3>
+                    <p class="text-gray-600">Rigorous quality control processes</p>
+                </div>
+                
+                <div class="text-center scroll-reveal" style="transition-delay: 0.3s;">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 hover-scale">
+                        <i class="fas fa-clock text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Fast Turnaround</h3>
+                    <p class="text-gray-600">Efficient project management</p>
+                </div>
+                
+                <div class="text-center scroll-reveal" style="transition-delay: 0.4s;">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 hover-scale">
+                        <i class="fas fa-shield-alt text-orange-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Data Security</h3>
+                    <p class="text-gray-600">Enterprise-grade security & compliance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6 scroll-reveal">Ready to Transform Your Data Into Insights?</h2>
+            <p class="text-xl text-blue-100 mb-8 scroll-reveal">
+                Let's discuss how we can help you achieve your research objectives
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
+                <a href="contact.html" class="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover-lift shimmer-effect">
+                    Get in Touch
+                </a>
+                <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover-scale">
+                    Request a Proposal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">A</span>
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold">Abhath Analytics</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Transforming insights into impact. Your trusted partner in market research excellence.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="cati.html" class="hover:text-white transition">CATI Services</a></li>
+                        <li><a href="online-survey.html" class="hover:text-white transition">Online Surveys</a></li>
+                        <li><a href="phone-to-web.html" class="hover:text-white transition">Phone to Web</a></li>
+                        <li><a href="idi.html" class="hover:text-white transition">In-Depth Interviews</a></li>
+                        <li><a href="f2f.html" class="hover:text-white transition">Face-to-Face Interviews</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>DCG1-0204, DLF Corporate Greens<br>Sector 74, Gurugram, 122004</span>
+                        </li>
+                        <li><i class="fas fa-envelope mr-2"></i>support@abhathanalytics.com</li>
+                        <li><i class="fas fa-phone mr-2"></i>+91-8595788768</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Abhath Analytics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+        
+        // Scroll reveal animation
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        
+        const revealOnScroll = () => {
+            scrollRevealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('revealed');
+                }
+            });
+        };
+        
+        // Initial check
+        revealOnScroll();
+        
+        // Check on scroll with throttling for performance
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) {
+                window.cancelAnimationFrame(scrollTimeout);
+            }
+            
+            scrollTimeout = window.requestAnimationFrame(() => {
+                revealOnScroll();
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add entrance animations to elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all animated elements
+        document.querySelectorAll('.animate-fadeInUp, .animate-fadeIn, .animate-fadeInLeft, .animate-fadeInRight, .animate-scaleIn').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

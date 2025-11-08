@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Abhath Analytics</title>
+    <meta name="description" content="Learn about Abhath Analytics - Premier market research company dedicated to empowering businesses with data-driven insights.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">A</span>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">Abhath Analytics</div>
+                        <div class="text-xs text-gray-600">Market Research Excellence</div>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-blue-600 transition font-medium">Home</a>
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-blue-600 transition font-medium flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="py-2">
+                                <a href="cati.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">CATI Services</a>
+                                <a href="online-survey.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">Online Surveys</a>
+                                <a href="phone-to-web.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">Phone to Web</a>
+                                <a href="idi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">In-Depth Interviews</a>
+                                <a href="f2f.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">Face-to-Face Interviews</a>
+                                <a href="data-processing.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition">Data Processing</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-blue-600 transition font-medium">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-blue-600 transition font-medium">Contact</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition transform hover:scale-105">
+                        Get Started
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-900">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded">Home</a>
+                <a href="about.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded">About</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-blue-600 to-purple-600 relative overflow-hidden">
+        <div class="absolute top-20 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div class="absolute bottom-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style="animation-delay: 1s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">About Abhath Analytics</h1>
+            <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                Premier market research company dedicated to empowering businesses with data-driven insights
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team Collaboration" class="rounded-2xl shadow-2xl">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Who We Are</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Abhath Analytics stands as a premier market research company dedicated to empowering businesses with data-driven insights. With expertise spanning multiple research methodologies, we bridge the gap between raw data and strategic business decisions.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Our commitment to quality, precision, and innovation sets us apart in the competitive landscape of market research. We don't just collect data—we unlock the stories hidden within it.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        We provide you with clarity, strategy, and actionable intelligence that propels your business forward.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
+                    <p class="text-gray-600">Striving for the highest quality in every project and interaction</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
+                    <p class="text-gray-600">Maintaining ethical standards and transparent communication</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+                    <p class="text-gray-600">Embracing new technologies and methodologies</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Partnership</h3>
+                    <p class="text-gray-600">Building lasting relationships with our clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Sets Us Apart -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Sets Us Apart</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-600 rounded-lg p-3 mr-4">
+                            <i class="fas fa-chart-bar text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Multiple Methodologies</h3>
+                            <p class="text-gray-700">
+                                Expertise across CATI, Online Surveys, Phone to Web, IDI, F2F/CAPI, and comprehensive data processing capabilities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-purple-600 rounded-lg p-3 mr-4">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Expert Team</h3>
+                            <p class="text-gray-700">
+                                Seasoned professionals with decades of combined experience in market research and data analytics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-green-600 rounded-lg p-3 mr-4">
+                            <i class="fas fa-check-double text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Quality Assurance</h3>
+                            <p class="text-gray-700">
+                                Rigorous quality control processes at every stage from data collection to final reporting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-orange-600 rounded-lg p-3 mr-4">
+                            <i class="fas fa-globe text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Pan-India Reach</h3>
+                            <p class="text-gray-700">
+                                Extensive network across India with capabilities for international research projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center text-white">
+                <div>
+                    <div class="text-5xl font-bold mb-2">10+</div>
+                    <div class="text-xl text-blue-100">Years of Experience</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">500+</div>
+                    <div class="text-xl text-blue-100">Projects Completed</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">200+</div>
+                    <div class="text-xl text-blue-100">Happy Clients</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">98%</div>
+                    <div class="text-xl text-blue-100">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Approach</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-bold text-lg">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Understand Your Needs</h3>
+                                <p class="text-gray-600">Deep dive into your research objectives and business goals</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-purple-600 font-bold text-lg">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Design the Right Solution</h3>
+                                <p class="text-gray-600">Craft methodology tailored to your specific requirements</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-green-600 font-bold text-lg">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Execute with Excellence</h3>
+                                <p class="text-gray-600">Implement research with rigorous quality standards</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-orange-600 font-bold text-lg">4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Deliver Actionable Insights</h3>
+                                <p class="text-gray-600">Transform data into strategic intelligence for decision-making</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Our Approach" class="rounded-2xl shadow-2xl float-animation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Ready to Partner With Us?</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Let's discuss how we can help transform your data into actionable insights
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition transform hover:scale-105">
+                    Get in Touch
+                </a>
+                <a href="contact.html" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transition">
+                    Request a Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">A</span>
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold">Abhath Analytics</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Transforming insights into impact. Your trusted partner in market research excellence.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="cati.html" class="hover:text-white transition">CATI Services</a></li>
+                        <li><a href="online-survey.html" class="hover:text-white transition">Online Surveys</a></li>
+                        <li><a href="phone-to-web.html" class="hover:text-white transition">Phone to Web</a></li>
+                        <li><a href="idi.html" class="hover:text-white transition">In-Depth Interviews</a></li>
+                        <li><a href="f2f.html" class="hover:text-white transition">Face-to-Face Interviews</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>DCG1-0204, DLF Corporate Greens<br>Sector 74, Gurugram, 122004</span>
+                        </li>
+                        <li><i class="fas fa-envelope mr-2"></i>support@abhathanalytics.com</li>
+                        <li><i class="fas fa-phone mr-2"></i>+91-8595788768</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Abhath Analytics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

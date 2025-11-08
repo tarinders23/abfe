@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone to Web - Abhath Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased">
+    
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">A</span>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">Abhath Analytics</div>
+                        <div class="text-xs text-gray-600">Market Research Excellence</div>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-blue-600 transition">Home</a>
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-blue-600 transition">Services <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                            <a href="cati.html" class="block px-4 py-2 hover:bg-blue-50">CATI Services</a>
+                            <a href="online-survey.html" class="block px-4 py-2 hover:bg-blue-50">Online Surveys</a>
+                            <a href="phone-to-web.html" class="block px-4 py-2 hover:bg-blue-50">Phone to Web</a>
+                            <a href="idi.html" class="block px-4 py-2 hover:bg-blue-50">In-Depth Interviews</a>
+                            <a href="f2f.html" class="block px-4 py-2 hover:bg-blue-50">Face-to-Face</a>
+                            <a href="data-processing.html" class="block px-4 py-2 hover:bg-blue-50">Data Processing</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-blue-600 transition">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-blue-600 transition">Contact</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full">Get Started</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 bg-gradient-to-br from-green-600 to-teal-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-exchange-alt text-white text-3xl"></i>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Phone to Web</h1>
+            <p class="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">Seamless Integration of Telephone and Digital Research</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">What is Phone to Web?</h2>
+                    <p class="text-lg text-gray-600 mb-6">Phone to Web is an innovative hybrid approach that combines the personal touch of telephone contact with the efficiency and versatility of online survey completion.</p>
+                    <p class="text-lg text-gray-600">This methodology maximizes response rates while offering respondents flexible completion options, leveraging the strengths of both methodologies for optimal results.</p>
+                </div>
+                <div><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt="Phone to Web" class="rounded-2xl shadow-2xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-green-50 to-teal-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">The Phone to Web Process</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-green-600 to-teal-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Initial Phone Contact</h3>
+                    <p class="text-gray-600">Trained interviewers make contact, explain purpose, screen for qualification, and build rapport.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Transition to Online</h3>
+                    <p class="text-gray-600">Provide unique survey link via SMS or email with clear instructions and authentication.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Web Survey Completion</h3>
+                    <p class="text-gray-600">Respondents complete survey at convenience with user-friendly interface and progress saving.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">4</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Data Integration</h3>
+                    <p class="text-gray-600">Seamless merging of data with automated validation and follow-up capability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Key Benefits</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex items-start">
+                    <div class="bg-green-100 rounded-full p-3 mr-4"><i class="fas fa-chart-line text-green-600 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">Higher Response Rates</h3>
+                        <p class="text-gray-600">Personal invitation increases participation</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-blue-100 rounded-full p-3 mr-4"><i class="fas fa-check-circle text-blue-600 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">Enhanced Data Quality</h3>
+                        <p class="text-gray-600">Screening ensures qualified respondents</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-purple-100 rounded-full p-3 mr-4"><i class="fas fa-clock text-purple-600 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">Respondent Convenience</h3>
+                        <p class="text-gray-600">Complete when and where convenient</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-pink-100 rounded-full p-3 mr-4"><i class="fas fa-dollar-sign text-pink-600 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">Cost Efficiency</h3>
+                        <p class="text-gray-600">Lower interviewer time reduces costs</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-orange-100 rounded-full p-3 mr-4"><i class="fas fa-user-shield text-orange-600 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">Reduced Bias</h3>
+                        <p class="text-gray-600">Self-completion minimizes interviewer effects</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-indigo-100 rounded-full p-3 mr-4"><i class="fas fa-photo-video text-indigo-600 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-2">Rich Media</h3>
+                        <p class="text-gray-600">Web platform supports multimedia content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-green-600 to-teal-600">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Combine the Best of Both Worlds?</h2>
+            <p class="text-xl text-green-100 mb-8">Maximize response rates with Phone to Web methodology</p>
+            <a href="contact.html" class="bg-white text-green-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition inline-block">Contact Us</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-lg font-bold mb-2">Abhath Analytics</div>
+                    <p class="text-gray-400 text-sm">Transforming insights into impact</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="cati.html" class="hover:text-white">CATI</a></li>
+                        <li><a href="online-survey.html" class="hover:text-white">Online Surveys</a></li>
+                        <li><a href="phone-to-web.html" class="hover:text-white">Phone to Web</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm">support@abhathanalytics.com<br>+91-8595788768</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Abhath Analytics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+            const menu = document.createElement('div');
+            menu.className = 'md:hidden bg-white shadow-lg p-4';
+            menu.innerHTML = '<a href="index.html" class="block py-2">Home</a><a href="contact.html" class="block py-2">Contact</a>';
+            document.querySelector('nav').appendChild(menu);
+        });
+    </script>
+</body>
+</html>
