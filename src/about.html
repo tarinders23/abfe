@@ -5,7 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Abhath Analytics</title>
     <meta name="description" content="Learn about Abhath Analytics - Premier market research company dedicated to empowering businesses with data-driven insights.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+        
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            reveals.forEach(reveal => {
+                observer.observe(reveal);
+            });
+        }
+        
+        // Initialize scroll reveal
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .gradient-text {
@@ -20,6 +44,26 @@
         }
         .float-animation {
             animation: float 3s ease-in-out infinite;
+        }
+            
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
@@ -99,7 +143,7 @@
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team Collaboration" class="rounded-2xl shadow-2xl">
                 </div>
                 <div>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Who We Are</h2>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6" scroll-reveal">Who We Are</h2>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                         Abhath Analytics stands as a premier market research company dedicated to empowering businesses with data-driven insights. With expertise spanning multiple research methodologies, we bridge the gap between raw data and strategic business decisions.
                     </p>
@@ -118,8 +162,8 @@
     <section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" scroll-reveal">Our Core Values</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto" scroll-reveal></div>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -127,7 +171,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-award text-white text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" scroll-reveal">Excellence</h3>
                     <p class="text-gray-600">Striving for the highest quality in every project and interaction</p>
                 </div>
                 
@@ -135,7 +179,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-shield-alt text-white text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" scroll-reveal">Integrity</h3>
                     <p class="text-gray-600">Maintaining ethical standards and transparent communication</p>
                 </div>
                 
@@ -143,7 +187,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-lightbulb text-white text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" scroll-reveal">Innovation</h3>
                     <p class="text-gray-600">Embracing new technologies and methodologies</p>
                 </div>
                 
@@ -151,7 +195,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-handshake text-white text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Partnership</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" scroll-reveal">Partnership</h3>
                     <p class="text-gray-600">Building lasting relationships with our clients</p>
                 </div>
             </div>
@@ -162,8 +206,8 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Sets Us Apart</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" scroll-reveal">What Sets Us Apart</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto" scroll-reveal></div>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8">
@@ -173,7 +217,7 @@
                             <i class="fas fa-chart-bar text-white text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Multiple Methodologies</h3>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" scroll-reveal">Multiple Methodologies</h3>
                             <p class="text-gray-700">
                                 Expertise across CATI, Online Surveys, Phone to Web, IDI, F2F/CAPI, and comprehensive data processing capabilities.
                             </p>
@@ -187,7 +231,7 @@
                             <i class="fas fa-users text-white text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Expert Team</h3>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" scroll-reveal">Expert Team</h3>
                             <p class="text-gray-700">
                                 Seasoned professionals with decades of combined experience in market research and data analytics.
                             </p>
@@ -201,7 +245,7 @@
                             <i class="fas fa-check-double text-white text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Quality Assurance</h3>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" scroll-reveal">Quality Assurance</h3>
                             <p class="text-gray-700">
                                 Rigorous quality control processes at every stage from data collection to final reporting.
                             </p>
@@ -215,7 +259,7 @@
                             <i class="fas fa-globe text-white text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Pan-India Reach</h3>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" scroll-reveal">Pan-India Reach</h3>
                             <p class="text-gray-700">
                                 Extensive network across India with capabilities for international research projects.
                             </p>
@@ -255,14 +299,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Approach</h2>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6" scroll-reveal">Our Approach</h2>
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
                                 <span class="text-blue-600 font-bold text-lg">1</span>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Understand Your Needs</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" scroll-reveal">Understand Your Needs</h3>
                                 <p class="text-gray-600">Deep dive into your research objectives and business goals</p>
                             </div>
                         </div>
@@ -272,7 +316,7 @@
                                 <span class="text-purple-600 font-bold text-lg">2</span>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Design the Right Solution</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" scroll-reveal">Design the Right Solution</h3>
                                 <p class="text-gray-600">Craft methodology tailored to your specific requirements</p>
                             </div>
                         </div>
@@ -282,7 +326,7 @@
                                 <span class="text-green-600 font-bold text-lg">3</span>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Execute with Excellence</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" scroll-reveal">Execute with Excellence</h3>
                                 <p class="text-gray-600">Implement research with rigorous quality standards</p>
                             </div>
                         </div>
@@ -292,7 +336,7 @@
                                 <span class="text-orange-600 font-bold text-lg">4</span>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Deliver Actionable Insights</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" scroll-reveal">Deliver Actionable Insights</h3>
                                 <p class="text-gray-600">Transform data into strategic intelligence for decision-making</p>
                             </div>
                         </div>
@@ -308,7 +352,7 @@
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6">Ready to Partner With Us?</h2>
+            <h2 class="text-4xl font-bold text-gray-900 mb-6" scroll-reveal">Ready to Partner With Us?</h2>
             <p class="text-xl text-gray-600 mb-8">
                 Let's discuss how we can help transform your data into actionable insights
             </p>
@@ -388,6 +432,30 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
+    
+        
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            reveals.forEach(reveal => {
+                observer.observe(reveal);
+            });
+        }
+        
+        // Initialize scroll reveal
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
     </script>
 </body>
 </html>
