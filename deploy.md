@@ -1,0 +1,1 @@
+ssh ubuntu@65.1.110.175;cd ~/projects/abfe;git pull origin main;sudo cp -r /home/ubuntu/projects/abfe/src/* /var/www/abfe/
